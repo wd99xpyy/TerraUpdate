@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: cucumber
   itemImage: {fileID: 21300000, guid: c677c4dbb0d652340a9246a9d1b20b6e, type: 3}
   itemHeld: 0
-  isFood: 0
+  isFood: 1
   isMed: 0
   itemInfo: 

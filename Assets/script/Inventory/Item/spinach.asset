@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: spinach
   itemImage: {fileID: 21300000, guid: 8248fd7136de19b46a9369dd7328cee3, type: 3}
-  itemHeld: 0
+  itemHeld: 3
   isFood: 1
   isMed: 0
   itemInfo: 

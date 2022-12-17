@@ -13,8 +13,20 @@ MonoBehaviour:
   m_Name: Guineapig
   m_EditorClassIdentifier: 
   anmalSpecise: Guineapig
-  animalImage: {fileID: 21300000, guid: 62987035a802540158dc7d1b66c007d6, type: 3}
+  animalImage: {fileID: 21300000, guid: 54c34b770c01a3842a74c14a0c734de3, type: 3}
   saveNum: 0
   deadNum: 0
   beSaw: 0
+  FoodLike:
+  - {fileID: 11400000, guid: cfa9d8e1d09d03a45b9e143ef3d910af, type: 2}
+  - {fileID: 11400000, guid: 45f31bacffd237544a5572218d99052f, type: 2}
+  - {fileID: 11400000, guid: d8e43f253fc78e94a9f5e0c152fdcd8c, type: 2}
+  - {fileID: 11400000, guid: e8a5bcbe3b7f3064e9e287f81590dc1e, type: 2}
+  - {fileID: 11400000, guid: 0d6ade4b463a53c4fa704148ec569746, type: 2}
+  FoodDislike:
+  - {fileID: 11400000, guid: ec6f7d4bdf9753f4391ceddb7ea9015a, type: 2}
+  - {fileID: 11400000, guid: 13341a9ef1ba4a743a3e401d0fffa2cb, type: 2}
+  - {fileID: 11400000, guid: 678408dd32b6b7a4eaf4b99612b6d053, type: 2}
+  - {fileID: 11400000, guid: 928223bd61393b44798c1e6cdb5dc3ce, type: 2}
+  - {fileID: 11400000, guid: c432f8a2ea3306149a414520c528914f, type: 2}
   AnimalInfo: guineapig info

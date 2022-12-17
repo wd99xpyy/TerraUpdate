@@ -107,4 +107,27 @@ public class AnimalOnWorld : MonoBehaviour
         infothirstbar.SetHealth(animalThirst);
     }
 
+    public bool checkFoodLike(item food)
+    {
+        for(int i = 0; i < thisAnimal.FoodLike.Length; i++)
+        {
+            if (thisAnimal.FoodLike[i] == food)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool checkFoodDislike(item food)
+    {
+        for (int i = 0; i < thisAnimal.FoodDislike.Length; i++)
+        {
+            if (thisAnimal.FoodDislike[i] == food)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

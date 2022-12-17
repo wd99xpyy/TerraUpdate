@@ -24,8 +24,8 @@ public class assignPlayerName : MonoBehaviour
 
     public void assignName()
     {
-        Pname.text = PlayerPrefs.GetString("PlayerName");
-        Pname1.text = PlayerPrefs.GetString("PlayerName");
+        //Pname.text = PlayerPrefs.GetString("PlayerName");
+        //Pname1.text = PlayerPrefs.GetString("PlayerName");
         Pname2.text = PlayerPrefs.GetString("PlayerName");
     }
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Leech Ointment
   itemImage: {fileID: 21300000, guid: ab371c1c1499b224d94619d9c9293907, type: 3}
-  itemHeld: 3
+  itemHeld: 1
   isFood: 0
   isMed: 1
   itemInfo: 

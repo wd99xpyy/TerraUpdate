@@ -97,6 +97,7 @@ MonoBehaviour:
   objectUsing: {fileID: 0}
   isUsing: 0
   slotPrefab: {fileID: 5804750947498264639}
+  feedTip: {fileID: 0}
 --- !u!114 &2036410176725876230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,11 +247,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 11.4
+  m_fontSize: 0
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 5
+  m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1

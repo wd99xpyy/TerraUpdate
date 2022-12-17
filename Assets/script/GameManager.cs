@@ -11,7 +11,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public int currentLocation = 0;
-    public string[] loactionName = {"The Base", "Hospital" };
+    public string[] loactionName = { "The Base", "Hospital", "Street", "Parking" };
     public TextMeshProUGUI locationNameonTopbar;
     public TextMeshProUGUI locationNameonMap;
 
@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
     public int avaliableSet;
 
     public static GameObject currentSelectAnimal;
+
+    public GameObject feedTip;
 
     // Start is called before the first frame update
     void Start()
@@ -86,7 +88,7 @@ public class GameManager : MonoBehaviour
                     OpenDevice();
                 }*/
 
-        if (select.GetComponent<select>().currentlySelect != 2)
+/*        if (select.GetComponent<select>().currentlySelect != 2)
         {
             myBagIsOpen = false;
             myBag.SetActive(false);
@@ -95,7 +97,7 @@ public class GameManager : MonoBehaviour
         {
             myBagIsOpen = true;
             myBag.SetActive(true);
-        }
+        }*/
 
         if(select.GetComponent<select>().currentlySelect == 0)
         {
@@ -132,6 +134,7 @@ public class GameManager : MonoBehaviour
     public void AssignName()
     {
         textinfiled = inputfiled.text;
+        Debug.Log(textinfiled);
         if (inputfiled.text.Length > 1)
         {
             animalAssignName.GetComponent<AnimalOnWorld>().animalN = true;
@@ -164,6 +167,8 @@ public class GameManager : MonoBehaviour
     }
     public void updateLocationName()
     {
+        Debug.Log(currentLocation);
+        Debug.Log(loactionName.Length); ;
         locationNameonMap.text = loactionName[currentLocation];
         locationNameonTopbar.text = loactionName[currentLocation];
     }
@@ -212,7 +217,9 @@ public class GameManager : MonoBehaviour
 
     public void locatedLogo()
     {
-        currentL.transform.position = allLocation[currentLocation].transform.position;
+        Vector3 logoP = allLocation[currentLocation].transform.position;
+        currentL.transform.position = new Vector3(logoP.x,logoP.y + 10,logoP.z);
+        
     }
 
     public void water()
@@ -233,5 +240,30 @@ public class GameManager : MonoBehaviour
             currentSelectAnimal.GetComponent<AnimalOnWorld>().refreshBar();
             //Debug.Log("water");
         }
+    }
+
+    public void feedAnimal()
+    {
+        if (currentSelectAnimal)
+        {
+            OpenMyBag();
+        }
+        else
+        {
+            StartCoroutine(theTip());
+        }
+    }
+    IEnumerator theTip()
+    {
+        feedTip.SetActive(true);
+        yield return new WaitForSeconds(2);
+        feedTip.SetActive(false);
+        backToSelect();
+    }
+
+    public void backToSelect()
+    {
+        select.GetComponent<select>().setSelect(0);
+        //Debug.Log(select.GetComponent<select>().currentlySelect);
     }
 }

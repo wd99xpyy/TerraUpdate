@@ -9,25 +9,25 @@ public class cameraMove : MonoBehaviour
         https://blog.csdn.net/qq_45632382/article/details/108444540?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-108444540-blog-95387553.pc_relevant_3mothn_strategy_and_data_recovery&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-108444540-blog-95387553.pc_relevant_3mothn_strategy_and_data_recovery&utm_relevant_index=2
        */
     public bool is2D = false;
-    public bool is1D_X = false;
+    public bool is1D_X = true;
     public bool is1D_Y = false;
     public bool isMouseDown = false;
     private Vector3 lastMousePosition = Vector3.zero;
     public float CAM_Yspeed = 0.05f;
     public float CAM_Xspeed = 0.05f;
-    //public GameObject thecamera;
-    public GameObject select;
 
+    public GameObject gamemanager;
+    //public GameObject thecamera;
     // Update is called once per frame
     void Update()
     {
-        if(select.GetComponent<select>().currentlySelect != 1)
+        if(gamemanager.GetComponent<GameManager>().currentLocation == 0)
         {
-            is1D_X = false;
+            is1D_X=false;
         }
         else
         {
-            is1D_X = true;
+            is1D_X=true;
         }
         if (Input.GetMouseButtonDown(0))
         {

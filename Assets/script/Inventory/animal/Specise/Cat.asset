@@ -13,8 +13,20 @@ MonoBehaviour:
   m_Name: Cat
   m_EditorClassIdentifier: 
   anmalSpecise: Cat
-  animalImage: {fileID: 21300000, guid: 261f00386b16949949b05ee0d2f9bba3, type: 3}
+  animalImage: {fileID: 21300000, guid: 419dc8942eccccf4ca250328e25b43cc, type: 3}
   saveNum: 0
   deadNum: 0
   beSaw: 0
+  FoodLike:
+  - {fileID: 11400000, guid: c432f8a2ea3306149a414520c528914f, type: 2}
+  - {fileID: 11400000, guid: a403f920e0a6f7846861cf0a03cc99ff, type: 2}
+  - {fileID: 11400000, guid: 668c97b4f3d86394a95342c2226ab7d2, type: 2}
+  - {fileID: 11400000, guid: ec6f7d4bdf9753f4391ceddb7ea9015a, type: 2}
+  - {fileID: 11400000, guid: a0db78e0a59e9624f8c22ac7e195e0f3, type: 2}
+  FoodDislike:
+  - {fileID: 11400000, guid: b32ad4e8c8d887440a648e530f805bed, type: 2}
+  - {fileID: 11400000, guid: 3664c4501fed4e740961f3b5fba67a21, type: 2}
+  - {fileID: 11400000, guid: e8a5bcbe3b7f3064e9e287f81590dc1e, type: 2}
+  - {fileID: 11400000, guid: 13341a9ef1ba4a743a3e401d0fffa2cb, type: 2}
+  - {fileID: 11400000, guid: 961d25b68b25dfb4394fe408aadb13e5, type: 2}
   AnimalInfo: Pet cat's descendant

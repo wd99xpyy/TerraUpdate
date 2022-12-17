@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Aid Kit Blue
   itemImage: {fileID: 21300000, guid: cf1fe09f7d35bdf468cbfe5164bbbc1f, type: 3}
-  itemHeld: 3
+  itemHeld: 1
   isFood: 0
   isMed: 1
   itemInfo: 

@@ -10,6 +10,8 @@ public class Animal : ScriptableObject
     public int saveNum;
     public int deadNum;
     public bool beSaw;
+    public item[] FoodLike;
+    public item[] FoodDislike;
     [TextArea]
     public string AnimalInfo;
 

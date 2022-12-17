@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Bandage
   itemImage: {fileID: 21300000, guid: cda96b61f974d57448923ce61e755bb6, type: 3}
-  itemHeld: 3
+  itemHeld: 1
   isFood: 0
   isMed: 1
   itemInfo: Stop Bleeding
