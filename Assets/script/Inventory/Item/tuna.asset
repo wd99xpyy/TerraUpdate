@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: tuna
   itemImage: {fileID: 21300000, guid: 2569fdb4cc16e4d488e5962ed1afc3bd, type: 3}
   itemHeld: 0
-  isFood: 0
+  isFood: 1
   isMed: 0
   itemInfo: 

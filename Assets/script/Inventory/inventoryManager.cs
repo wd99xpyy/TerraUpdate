@@ -8,8 +8,12 @@ public class inventoryManager : MonoBehaviour
 {
     static inventoryManager instance;
 
-    public Inventory myBag;
-    public GameObject slotGrid;
+    public Inventory FoobBag;
+    public Inventory MedBag;
+
+    public GameObject slotGridFood;
+    public GameObject slotGridMed;
+
     public slot slotPrefab;
     //public TextMeshProUGUI itemInfo;
 
@@ -33,10 +37,18 @@ public class inventoryManager : MonoBehaviour
         //instance.itemInfo.text = iteminfo;
     }
 
-    public static void CreateNewItem(item item)
+    public static void CreateNewFood(item item)
     {
-        slot newItem = Instantiate(instance.slotPrefab,instance.slotGrid.transform.position,Quaternion.identity);
-        newItem.gameObject.transform.SetParent(instance.slotGrid.transform);
+        slot newItem = Instantiate(instance.slotPrefab,instance.slotGridFood.transform.position,Quaternion.identity);
+        newItem.gameObject.transform.SetParent(instance.slotGridFood.transform);
+        newItem.slotItem = item;
+        newItem.slotImage.sprite = item.itemImage;
+        newItem.slotIndex.text = item.itemHeld.ToString();
+    }
+    public static void CreateNewMed(item item)
+    {
+        slot newItem = Instantiate(instance.slotPrefab, instance.slotGridMed.transform.position, Quaternion.identity);
+        newItem.gameObject.transform.SetParent(instance.slotGridMed.transform);
         newItem.slotItem = item;
         newItem.slotImage.sprite = item.itemImage;
         newItem.slotIndex.text = item.itemHeld.ToString();
@@ -44,18 +56,46 @@ public class inventoryManager : MonoBehaviour
 
     public static void RefreshItem()
     {
-        for(int i = 0; i < instance.slotGrid.transform.childCount; i++)
+        for(int i = 0; i < instance.slotGridFood.transform.childCount; i++)
         {
-            if(instance.slotGrid.transform.childCount == 0)
+            if(instance.slotGridFood.transform.childCount == 0)
             {
                 break;
             }
-            Destroy(instance.slotGrid.transform.GetChild(i).gameObject);
+            Destroy(instance.slotGridFood.transform.GetChild(i).gameObject);
         }
 
-        for(int i = 0; i < instance.myBag.itemList.Count; i++)
+        for(int i = 0; i < instance.FoobBag.itemList.Count; i++)
         {
-            CreateNewItem(instance.myBag.itemList[i]);
+            if (instance.FoobBag.itemList[i].itemHeld > 0)
+            {
+                CreateNewFood(instance.FoobBag.itemList[i]);
+            }
+            else
+            {
+                instance.FoobBag.itemList[i].itemHeld = 0;
+            }
+        }
+
+        for (int i = 0; i < instance.slotGridMed.transform.childCount; i++)
+        {
+            if (instance.slotGridMed.transform.childCount == 0)
+            {
+                break;
+            }
+            Destroy(instance.slotGridMed.transform.GetChild(i).gameObject);
+        }
+
+        for (int i = 0; i < instance.MedBag.itemList.Count; i++)
+        {
+            if (instance.MedBag.itemList[i].itemHeld > 0)
+            {
+                CreateNewMed(instance.MedBag.itemList[i]);
+            }
+            else
+            {
+                instance.MedBag.itemList[i].itemHeld = 0;
+            }
         }
     }
 }

@@ -12,4 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e0c5a4a5fc6e0a42af7d85c759e2ba2, type: 3}
   m_Name: Food
   m_EditorClassIdentifier: 
-  itemList: []
+  itemList:
+  - {fileID: 11400000, guid: 13341a9ef1ba4a743a3e401d0fffa2cb, type: 2}
+  - {fileID: 11400000, guid: e8a5bcbe3b7f3064e9e287f81590dc1e, type: 2}
+  - {fileID: 11400000, guid: ec6f7d4bdf9753f4391ceddb7ea9015a, type: 2}
+  - {fileID: 11400000, guid: 45f31bacffd237544a5572218d99052f, type: 2}
+  - {fileID: 11400000, guid: a0db78e0a59e9624f8c22ac7e195e0f3, type: 2}
+  - {fileID: 11400000, guid: d8e43f253fc78e94a9f5e0c152fdcd8c, type: 2}
+  - {fileID: 11400000, guid: c432f8a2ea3306149a414520c528914f, type: 2}
+  - {fileID: 11400000, guid: a0fc757330788ba42893851c93926677, type: 2}
+  - {fileID: 11400000, guid: 3664c4501fed4e740961f3b5fba67a21, type: 2}
+  - {fileID: 11400000, guid: 678408dd32b6b7a4eaf4b99612b6d053, type: 2}
+  - {fileID: 11400000, guid: 961d25b68b25dfb4394fe408aadb13e5, type: 2}
+  - {fileID: 11400000, guid: 0f5e197ae293b1746ae59e71922bc7c6, type: 2}
+  - {fileID: 11400000, guid: 52597453914701841aff3446db49a131, type: 2}
+  - {fileID: 11400000, guid: e17ee8a64835ddb45be9928c9b2716f8, type: 2}
+  - {fileID: 11400000, guid: 5d3668c879b51484db2464f05cb91b17, type: 2}
+  - {fileID: 11400000, guid: c35b7d627993c764487665d817dc3c62, type: 2}
+  - {fileID: 11400000, guid: 4212e1492725b4540ab89ef9409f4276, type: 2}
+  - {fileID: 11400000, guid: 668c97b4f3d86394a95342c2226ab7d2, type: 2}
+  - {fileID: 11400000, guid: 0d6ade4b463a53c4fa704148ec569746, type: 2}
+  - {fileID: 11400000, guid: f233319cf220bbe498900fc6502990dc, type: 2}
+  - {fileID: 11400000, guid: b32ad4e8c8d887440a648e530f805bed, type: 2}
+  - {fileID: 11400000, guid: cfa9d8e1d09d03a45b9e143ef3d910af, type: 2}

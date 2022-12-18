@@ -17,8 +17,11 @@ public class select : MonoBehaviour
         selectedGameObject[select].transform.GetChild(0).gameObject.SetActive(false);
         selectedGameObject[select].transform.GetChild(1).gameObject.SetActive(true);
         selectedGameObject[select].transform.GetChild(2).gameObject.SetActive(false);
-        disSetSelect(currentlySelect);
-        currentlySelect = select;   
+        if (select != currentlySelect)
+        {
+            disSetSelect(currentlySelect);
+            currentlySelect = select;
+        }
     }
 
     public void disSetSelect(int select)

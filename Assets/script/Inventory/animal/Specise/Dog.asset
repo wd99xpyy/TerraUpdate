@@ -13,8 +13,20 @@ MonoBehaviour:
   m_Name: Dog
   m_EditorClassIdentifier: 
   anmalSpecise: Dog
-  animalImage: {fileID: 21300000, guid: f2ddf945c223843de8228d229e73a8a4, type: 3}
+  animalImage: {fileID: 1140378722, guid: a4afe7c3c7338c44e9ae1d915d995a1f, type: 3}
   saveNum: 0
   deadNum: 0
   beSaw: 0
+  FoodLike:
+  - {fileID: 11400000, guid: 4212e1492725b4540ab89ef9409f4276, type: 2}
+  - {fileID: 11400000, guid: a403f920e0a6f7846861cf0a03cc99ff, type: 2}
+  - {fileID: 11400000, guid: 3664c4501fed4e740961f3b5fba67a21, type: 2}
+  - {fileID: 11400000, guid: e17ee8a64835ddb45be9928c9b2716f8, type: 2}
+  - {fileID: 11400000, guid: 5d3668c879b51484db2464f05cb91b17, type: 2}
+  FoodDislike:
+  - {fileID: 11400000, guid: 45f31bacffd237544a5572218d99052f, type: 2}
+  - {fileID: 11400000, guid: f233319cf220bbe498900fc6502990dc, type: 2}
+  - {fileID: 11400000, guid: 13341a9ef1ba4a743a3e401d0fffa2cb, type: 2}
+  - {fileID: 11400000, guid: a0fc757330788ba42893851c93926677, type: 2}
+  - {fileID: 11400000, guid: 961d25b68b25dfb4394fe408aadb13e5, type: 2}
   AnimalInfo: Pet dog's descendants
