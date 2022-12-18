@@ -129,6 +129,11 @@ public class GameManager : MonoBehaviour
             }
             
         }
+
+        if(currentSelectAnimal!= null)
+        {
+            currentSelectAnimal.GetComponent<AnimalOnWorld>().refreshBar();
+        }
     }
 
     public void AssignName()
@@ -208,6 +213,10 @@ public class GameManager : MonoBehaviour
     {
         background.GetComponent<SpriteRenderer>().sprite = backgroundImage[locationNum];
         currentLocation = locationNum;
+        if(currentLocation!=0)
+        {
+            info.SetActive(false);
+        }
         theCamera.transform.position = new Vector3(-20, -50 * locationNum, -10);
         updateLocationName();
         locatedLogo();
@@ -227,7 +236,7 @@ public class GameManager : MonoBehaviour
         if (currentSelectAnimal)
         {
             currentSelectAnimal.GetComponent<AnimalOnWorld>().animalThirst += 10;
-            currentSelectAnimal.GetComponent<AnimalOnWorld>().refreshBar();
+            //currentSelectAnimal.GetComponent<AnimalOnWorld>().refreshBar();
             //Debug.Log("water");
         }
     }
@@ -237,7 +246,7 @@ public class GameManager : MonoBehaviour
         if (currentSelectAnimal)
         {
             currentSelectAnimal.GetComponent<AnimalOnWorld>().animalHealth += 10;
-            currentSelectAnimal.GetComponent<AnimalOnWorld>().refreshBar();
+            //currentSelectAnimal.GetComponent<AnimalOnWorld>().refreshBar();
             //Debug.Log("water");
         }
     }

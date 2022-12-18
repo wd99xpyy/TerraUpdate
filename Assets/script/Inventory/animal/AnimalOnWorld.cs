@@ -37,6 +37,9 @@ public class AnimalOnWorld : MonoBehaviour
 
     public GameObject release;
 
+    public GameObject feedTip;
+    public TextMeshProUGUI feedTipInfo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,8 +57,50 @@ public class AnimalOnWorld : MonoBehaviour
         if(time>5)
         {
             time = 0;
-            takeDamage(1);
+            HangryAndThirst(1);
+            //Debug.Log("hungry:" + animalHungry + " health:" + animalHealth + " happness: " + animalHappiness + " thirth: " + animalThirst);
+            if (animalHappiness < 1 || animalHungry < 1 || animalThirst < 1)
+            {
+                takeDamage(1);
+            }
         }
+
+        if(animalHealth <= 0)
+        {
+            StartCoroutine(theTip());
+            
+
+        }
+
+/*        if (animalHappiness > 100)
+        {
+            animalHappiness = 99;
+        }
+        if(animalThirst > 100)
+        {
+            animalThirst = 99;
+        }
+        if (animalHungry > 100)
+        {
+            animalHungry= 100;
+        }
+        if (animalHealth > 100)
+        {
+            animalHealth = 100;
+        }*/
+    }
+
+    IEnumerator theTip()
+    {
+        if (animalName!="")
+        {
+            feedTipInfo.text = animalName + " is dead";
+            feedTip.SetActive(true);
+        }
+        yield return new WaitForSeconds(2);
+        feedTip.SetActive(false);
+        feedTipInfo.text = "Please Select an animal to feed";
+        Destroy(gameObject);
     }
 
     public void refreshBar()
@@ -73,8 +118,24 @@ public class AnimalOnWorld : MonoBehaviour
 
     void takeDamage(int damage)
     {
-        animalHealth -= damage;
+        if(animalHealth > 0)
+        {
+            animalHealth -= damage;
+        }
         healthbar.SetHealth(animalHealth);
+    }
+
+    void HangryAndThirst(int damage)
+    {
+        if(animalHungry>0)
+        {
+            animalHungry -= damage;
+        }
+        if (animalThirst > 0)
+        {
+            animalThirst -= damage;
+        }
+        refreshBar();
     }
 
 

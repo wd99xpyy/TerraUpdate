@@ -10,7 +10,7 @@ public class itemonworld : MonoBehaviour
     private void OnMouseDown()
     {
         AddNewItem();
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     public void AddNewItem()

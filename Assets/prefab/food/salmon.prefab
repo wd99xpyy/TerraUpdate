@@ -125,4 +125,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisItem: {fileID: 11400000, guid: a0db78e0a59e9624f8c22ac7e195e0f3, type: 2}
-  playerInventory: {fileID: 11400000, guid: e06d56bbd5c91034eaa1d4daa3ff01f5, type: 2}
+  playerInventory: {fileID: 11400000, guid: 18a3d0a7e4c7a384e9dd3dcb08a12426, type: 2}

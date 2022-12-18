@@ -41,7 +41,10 @@ public class slot : MonoBehaviour
                     else if (isFoodDislike)
                     {
                         animalselect.GetComponent<AnimalOnWorld>().animalHungry += 5;
-                        animalselect.GetComponent<AnimalOnWorld>().animalHappiness -= 10;
+                        if (animalselect.GetComponent<AnimalOnWorld>().animalHappiness > 0)
+                        {
+                            animalselect.GetComponent<AnimalOnWorld>().animalHappiness -= 10;
+                        }
                     }
                     else
                     {
@@ -56,8 +59,15 @@ public class slot : MonoBehaviour
             }
             else if(slotItem.isMed)
             {
-                animalselect.GetComponent<AnimalOnWorld>().animalHealth += 5;
-                animalselect.GetComponent<AnimalOnWorld>().animalHappiness -= 5;
+                if (animalselect.GetComponent<AnimalOnWorld>().animalHealth<=99)
+                {
+                    animalselect.GetComponent<AnimalOnWorld>().animalHealth += 5;
+                }
+                
+                if (animalselect.GetComponent<AnimalOnWorld>().animalHappiness > 0)
+                {
+                    animalselect.GetComponent<AnimalOnWorld>().animalHappiness -= 5;
+                }
                 slotItem.itemHeld--;
             }
             animalselect.GetComponent<AnimalOnWorld>().refreshBar();
