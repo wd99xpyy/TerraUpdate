@@ -444,6 +444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -691,7 +692,6 @@ GameObject:
   - component: {fileID: 689606757}
   - component: {fileID: 689606756}
   - component: {fileID: 689606755}
-  - component: {fileID: 689606754}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -699,25 +699,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &689606754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689606753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c750d34237d18974f86b292570dd1026, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  is2D: 0
-  is1D_X: 1
-  is1D_Y: 0
-  isMouseDown: 0
-  CAM_Yspeed: 0.05
-  CAM_Xspeed: 0.05
-  select: {fileID: 0}
 --- !u!81 &689606755
 AudioListener:
   m_ObjectHideFlags: 0

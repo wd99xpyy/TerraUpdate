@@ -72,22 +72,22 @@ public class AnimalOnWorld : MonoBehaviour
 
         }
 
-/*        if (animalHappiness > 100)
+        if (animalHappiness > 100)
         {
             animalHappiness = 99;
         }
-        if(animalThirst > 100)
+        if (animalThirst > 100)
         {
             animalThirst = 99;
         }
         if (animalHungry > 100)
         {
-            animalHungry= 100;
+            animalHungry = 100;
         }
         if (animalHealth > 100)
         {
             animalHealth = 100;
-        }*/
+        }
     }
 
     IEnumerator theTip()
@@ -135,7 +135,7 @@ public class AnimalOnWorld : MonoBehaviour
         {
             animalThirst -= damage;
         }
-        refreshBar();
+        //refreshBar();
     }
 
 
